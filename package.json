@@ -1,0 +1,7 @@
+{
+  "name": "canboat-core",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kai Curry <kai@cape.io>",
+  "license": "MIT"
+}
