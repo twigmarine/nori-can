@@ -1,7 +1,7 @@
 {
-  "name": "canboat-core",
+  "name": "nori-can",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Kai Curry <kai@cape.io>",
+  "author": "Kai Curry <kai@twigmarine.com>",
   "license": "MIT"
 }
