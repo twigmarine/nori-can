@@ -2,6 +2,26 @@
   "name": "nori-can",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Kai Curry <kai@twigmarine.com>",
-  "license": "MIT"
+  "author": "Kai Curry <kai@cape.io>",
+  "contributors": [
+    {
+      "name": "Scott Bender",
+      "email": "scott@scottbender.net"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-lodash-fp": "^2.2.0-a1",
+    "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "get-bits": "^1.1.0",
+    "lodash": "^4.17.15",
+    "lodash-humps": "^3.1.5",
+    "prairie": "^3.9.3",
+    "split-lines": "^2.0.0",
+    "understory": "^1.7.2"
+  }
 }

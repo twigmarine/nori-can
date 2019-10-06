@@ -1,0 +1,15 @@
+---
+# yarn add -D eslint eslint-plugin-import eslint-plugin-lodash-fp eslint-config-airbnb-base
+env:
+  browser: false
+extends:
+  - eslint:recommended
+  - airbnb-base
+  - plugin:import/errors
+  - plugin:import/warnings
+  - plugin:lodash-fp/recommended
+plugins:
+  - import
+  - lodash-fp
+rules:
+  semi: [2, never]
