@@ -1,4 +1,4 @@
-# nori-can
+# Nori CAN
 
 ## Install
 `yarn add nori-can`
@@ -7,9 +7,8 @@
 ## Usage
 
 ```javascript
-const { createParser } = require('nori-can')
-const pgns = require('@canboat/pgns')
-const getPgnInfo = basicGetPgnInfo(createPgnMap(pgns))
+const { createGetInfo, parser } = require('nori-can')
+const getPgnInfo = createGetInfo(require('@canboat/pgns'))
 const parse = parser(getPgnInfo)
 const message = `19:27:10.670 R 11F80F03 20 1A 12 01 23 29 14 81
 19:27:10.675 R 11F80F03 21 E1 23 D6 EC AA 04 1A

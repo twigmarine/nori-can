@@ -10,14 +10,24 @@
     }
   ],
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint lib",
+    "test": "npm run lint && jest --watch"
+  },
   "devDependencies": {
+    "@canboat/pgns": "^1.0.8",
     "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-lodash-fp": "^2.2.0-a1",
     "jest": "^24.9.0"
   },
   "dependencies": {
+    "base64-arraybuffer": "^0.2.0",
+    "big.js": "^5.2.2",
+    "date-fns": "^2.4.1",
     "get-bits": "^1.1.0",
+    "int64-buffer": "^0.99.1007",
     "lodash": "^4.17.15",
     "lodash-humps": "^3.1.5",
     "prairie": "^3.9.3",
