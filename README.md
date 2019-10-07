@@ -52,6 +52,63 @@ I needed something that could be used in the browser that didn't have any field 
 * totalFrames: number - Fast-packet frames needed
 * data: object - Parsed field information here. See Field Props below.
 
+## CAN Identifier
+
+The highest-order bits are the ones transmitted first and are the network access priority bits. Each of the bits in the identification field are used during the arbitration process when there is a network access conflict.
+
+The standard boat CAN network adopts the CAN Extended Frame Format of SAE J1939 / ISO 11783. It uses a 29-bit extended message identifier instead of the 11-bit identifier found in the Standard Frame Format common to automobiles. The 29 bit ID includes Priority, Reserved, Data Page, PDU Format, PDU Specific (which can be a destination address, Group Extension, or proprietary), and Source Address.
+
+| Bit Slice | Bits | Field          | Description                                                                                                          |
+| --------- | ---- | -------------- | -------------------------------------------------------------------------------------------------------------------- |
+| 26 - 28   | 3    | Priority       | These bits have the most impact during network access arbitration                                                    |
+| 25        | 1    | Reserved Bit   | Reserved for future use                                                                                              |
+| 24        | 1    | Data Page      | Reserved for future use?                                                                                             |
+| 16 – 23   | 8    | Data ID Byte A | PDU FORMAT High-order byte of parameter group number of the data being transmitted                                   |
+| 08 - 15   | 8    | Data ID Byte B | PDU SPECIFIC Low-order byte of parameter group number for global addresses OR destination for non-global data groups |
+| 00 - 07   | 8    | Source Address | The final byte of the identification field always contains the address of the transmitting node.                     |
+
+The distinction between CAN base frame format and CAN extended frame format is accomplished in CAN 2.0B by using the IDE bit inside the Control Field. A low (dominant) IDE bit indicates an 11 bit message identifier; a high (recessive) IDE bit indicates a 29 bit identifier. During bus arbitration the standard 11 bit message ID frame will always have higher priority than the extended 29 bit message ID frame with identical 11 bit base identifier and thus gain bus access.
+
+The 29 bit message identifier consists of the regular 11 bit base identifier and an 18 bit identifier extension. Between the SOF (Start of Frame) bit and the end of the 11 bit (base) message identifier, both frame formats, Standard and Extended, are identical. Following the 11 bit base identifier, the Extended Format uses an (always recessive) SRR (Substitute Remote Request) bit, which, as its name implies, replaces the regular RTR (Remote Transmission Request). The following IDE (Identifier Extension) bit is also kept at a recessive level.
+
+### ISO 11783 Protocol Data Unit (PDU)
+
+Reserved bit, Data Page bit, PDU Format Field (8 bits), and Group Extension Field (8 bits). These 18 bits are used to establish the 24 bit PGN.
+
+Messages transmitted on the network are organized into parameter groups that are identified by a parameter group number (PGN) that appears in the CAN identifier field as either an 8-bit or 16-bit value depending on whether the parameter group is designed as an addressed or a broadcast message. The term Parameter Group Number (PGN) is used to refer to the value of the Reserve bit, DP, PF, and PS fields combined into a single 18 bit value.
+
+Most messages are designed as broadcast messages. Since only 1-byte is available for addressed messages this type is usually used for network management (requests, generic commands, acknowledgement, error reports, and manufacturer proprietary addressed messages).
+
+* If the PF is between 0 and 239, the message is addressable (PDU1) and the PS field contains the destination address.
+* If the PF is between 240 and 255, the message can only be broadcast (PDU2) and the PS field contains a Group Extension.
+
+The ID 0xCF004EE can be divided into the following chunks
+
+| 0x0C                              | 0xF0                  | 0x04                    | 0xEE                |
+| --------------------------------- | --------------------- | ----------------------- | ------------------- |
+| 000 011 0 0                       | 11110000              | 00000100                | 11101110            |
+| Priority, Reserved Bit, Data Page | Parameter Format (PF) | Parameter Specific (PS) | Source Address (SA) |
+
+Binary chunks
+
+| 000                           | 011  | 0   | 0   | 11110000 | 00000100 | 11101110 |
+| ----------------------------- | ---- | --- | --- | -------- | -------- | -------- |
+| Unused because ID is 29 bits. | Prio | R   | DP  | PF       | PS       | SA       |
+
+* PGN = the R, DP, PF and PS fields – in this case 0x0F004.
+* PF = 0xF0 = 240, i.e. this is a PDU2 (broadcast) message
+* PS = 0x04, i.e. the Group Extension = 4
+
+### Source Address
+
+All compliant devices must be self-configurable and capable of claiming addresses according to the ISO 11783-5 protocol. Physical network connections are not directly identified by a name or specific address and a single physical connection may be the location of more than one functional address.
+
+* Devices Use source address to determine device Network priority
+* Devices source address is determined by the devices Unique ID and NAME.
+* Source addresses can change. Do not use them as a unique permanent device identifier.
+
+### Priority
+
 ## Field Props
 
 * bitLength: number - Number of bits of binary data used to make the value.
