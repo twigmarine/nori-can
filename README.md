@@ -41,22 +41,22 @@ I needed something that could be used in the browser that didn't have any field 
 
 ## Returned Parsed PGN Props
 
-* canId: CAN Identifier. ISO 11783 (CAN 2.0 B Extended Frame Format)
-* prio: Message priority.
-* src: Source device address. Smaller numbers are from higher priority devices.
-* dst: Who the message for. 255 is for any or all devices.
-* pgn: Parameter Group Number. Defines the data on the network.
-* id: The id of the matched fields definition.
-* sequenceId: Fast-packet sequence Id.
-* description: Description from fields defintion
-* totalFrames: Fast-packet frames needed
-* data: field information here. See Field Props below.
+* canId: number - CAN Identifier. ISO 11783 (CAN 2.0 B Extended Frame Format)
+* prio: number - Message priority.
+* src: number - Source device address. Smaller numbers are from higher priority devices.
+* dst: number - Who the message for. 255 is for any or all devices.
+* pgn: number - Parameter Group Number. Defines the data on the network.
+* id: string - The id of the matched fields definition.
+* sequenceId: number - Fast-packet sequence Id.
+* description: string - Description from fields defintion
+* totalFrames: number - Fast-packet frames needed
+* data: object - Parsed field information here. See Field Props below.
 
 ## Field Props
 
-* bitLength: Number of bits of binary data used to make the value.
-* type: The kind of data.
-* name: Short title/description of the field.
-* value: Processed value
-* label: Result of looking up table based on value.
-* units: The value is in
+* bitLength: number - Number of bits of binary data used to make the value.
+* type: string - The kind of data.
+* name: string - Short title/description of the field.
+* value: any - Processed value
+* label: string - Result of looking up table based on value.
+* units: string - The value is in
