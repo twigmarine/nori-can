@@ -1,5 +1,6 @@
 {
   "name": "nori-can",
+  "description": "Process CAN messages found on boats.",
   "version": "1.0.1",
   "main": "lib/index.js",
   "author": "Kai Curry <kai@cape.io>",

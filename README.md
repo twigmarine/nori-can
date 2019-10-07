@@ -1,8 +1,14 @@
 # Nori CAN
 
+Process CAN network messages found on boats into usable javascript data objects. Helpful for displaying information and debugging network data issues. Inspiration from [canboatjs](). Although this is mostly an entire rewrite, there was probably some copy pasta.
+
 ## Install
+
 `yarn add nori-can`
-`yarn add @canboat/pgns` // Or other source of definitions.
+
+You will need a source of information on how to decode the various CAN messages based on PGN. Canboat is resource most use. It's also possible to bring in your own public or private definition files.
+
+`yarn add @canboat/pgns`
 
 ## Usage
 
