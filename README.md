@@ -1,6 +1,6 @@
 # Nori CAN
 
-Process CAN network messages found on boats into usable javascript data objects. Helpful for displaying information and debugging network data issues. Inspiration from [canboatjs](https://github.com/canboat/canboatjs). Although this is mostly an entire rewrite, there was probably some copy pasta.
+Process CAN network messages found on boats into usable javascript data objects. Helpful for displaying information and debugging network data issues. Inspiration from [canboatjs](https://github.com/canboat/canboatjs). Although this is mostly an entire rewrite, there was probably some copy pasta. This repo is only about processing messages. It does not contain any details on _how_ to process a message. You can look into using a source such as [canboat](https://github.com/canboat/canboat) for that.
 
 ## Install
 
