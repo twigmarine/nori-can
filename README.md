@@ -12,8 +12,10 @@ You will need a source of information on how to decode the various CAN messages 
 
 ## Usage
 
+### Parse a string
+
 ```javascript
-const pgns = require('@canboat/pgns')
+const pgns = require('@canboat/pgns') // Third party definition file.
 const { cleanup, createGetInfo, parser } = require('nori-can')
 
 const getPgnInfo = createGetInfo(pgns)
@@ -25,6 +27,177 @@ const message = `19:27:10.670 R 11F80F03 20 1A 12 01 23 29 14 81
 
 const result = parse(message)
 console.log(cleanup(result[0]))
+```
+
+### Get PGN Info
+
+```javascript
+const pgns = require('@canboat/pgns') // Third party definition file.
+const { createGetPgn } = require('nori-can')
+
+const getPgnInfo = createGetPgn(pgns)
+
+const result = parse(message)
+console.log(cleanup(result[0]))
+// You will get something that looks like this:
+const expectedRes = {
+  pgn: 60928,
+  id: 'isoAddressClaim',
+  description: 'ISO Address Claim',
+  complete: true,
+  length: 8,
+  repeatingFields: 0,
+  fields: [
+    {
+      order: 1,
+      id: 'uniqueNumber',
+      name: 'Unique Number',
+      description: 'ISO Identity Number',
+      bitLength: 21,
+      bitOffset: 0,
+      bitStart: 0,
+      type: 'Binary data',
+      signed: false,
+      resolution: 1,
+      offset: 0,
+      byteStart: 0,
+      withinByte: false
+    },
+    {
+      order: 2,
+      id: 'manufacturerCode',
+      name: 'Manufacturer Code',
+      bitLength: 11,
+      bitOffset: 21,
+      bitStart: 5,
+      type: 'Manufacturer code',
+      signed: false,
+      resolution: 1,
+      offset: 0,
+      byteStart: 2,
+      withinByte: false
+    },
+    {
+      order: 3,
+      id: 'deviceInstanceLower',
+      name: 'Device Instance Lower',
+      description: 'ISO ECU Instance',
+      bitLength: 3,
+      bitOffset: 32,
+      bitStart: 0,
+      signed: false,
+      resolution: 1,
+      offset: 0,
+      byteStart: 4,
+      withinByte: true
+    },
+    {
+      order: 4,
+      id: 'deviceInstanceUpper',
+      name: 'Device Instance Upper',
+      description: 'ISO Function Instance',
+      bitLength: 5,
+      bitOffset: 35,
+      bitStart: 3,
+      signed: false,
+      resolution: 1,
+      offset: 0,
+      byteStart: 4,
+      withinByte: true
+    },
+    {
+      order: 5,
+      id: 'deviceFunction',
+      name: 'Device Function',
+      description: 'ISO Function',
+      bitLength: 8,
+      bitOffset: 40,
+      bitStart: 0,
+      signed: false,
+      resolution: 1,
+      offset: 0,
+      bytes: 1,
+      byteStart: 5,
+      withinByte: true,
+      byteEnd: 6
+    },
+    {
+      order: 6,
+      id: 'reserved',
+      name: 'Reserved1',
+      bitLength: 1,
+      bitOffset: 48,
+      bitStart: 0,
+      type: 'Binary data',
+      signed: false,
+      resolution: 1,
+      offset: 0,
+      byteStart: 6,
+      withinByte: true
+    },
+    {
+      order: 7,
+      id: 'deviceClass',
+      name: 'Device Class',
+      bitLength: 7,
+      bitOffset: 49,
+      bitStart: 1,
+      type: 'Lookup table',
+      signed: false,
+      enumValues: [Map],
+      resolution: 1,
+      offset: 0,
+      byteStart: 6,
+      withinByte: true
+    },
+    {
+      order: 8,
+      id: 'systemInstance',
+      name: 'System Instance',
+      description: 'ISO Device Class Instance',
+      bitLength: 4,
+      bitOffset: 56,
+      bitStart: 0,
+      signed: false,
+      resolution: 1,
+      offset: 0,
+      byteStart: 7,
+      withinByte: true
+    },
+    {
+      order: 9,
+      id: 'industryGroup',
+      name: 'Industry Group',
+      bitLength: 3,
+      bitOffset: 60,
+      bitStart: 4,
+      type: 'Lookup table',
+      signed: false,
+      enumValues: [Map],
+      resolution: 1,
+      offset: 0,
+      byteStart: 7,
+      withinByte: true
+    },
+    {
+      order: 10,
+      id: 'reserved',
+      name: 'Reserved2',
+      description: 'ISO Self Configurable',
+      bitLength: 1,
+      bitOffset: 63,
+      bitStart: 7,
+      type: 'Binary data',
+      signed: false,
+      resolution: 1,
+      offset: 0,
+      byteStart: 7,
+      withinByte: true
+    }
+  ],
+  singleFrame: true
+}
+
 ```
 
 ## Status
