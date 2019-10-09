@@ -38,8 +38,7 @@ const { createGetPgn } = require('nori-can')
 const getPgnInfo = createGetPgn(pgns)
 // If you prefer to get the first result use createGetPgn0()
 
-const result = parse(message)
-console.log(cleanup(result[0])) // note result is an array
+console.log(getPgnInfo[0]) // note result is an array
 
 // You will get something that looks like this:
 const expectedRes = {
