@@ -26,6 +26,7 @@
   "dependencies": {
     "base64-arraybuffer": "^0.2.0",
     "big.js": "^5.2.2",
+    "bit-buffer": "^0.2.4",
     "date-fns": "^2.4.1",
     "get-bits": "^1.1.0",
     "int64-buffer": "^0.99.1007",
