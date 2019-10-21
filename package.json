@@ -20,8 +20,10 @@
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-lodash-fp": "^2.2.0-a1",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "nori-pgns": "webmasterkai/nori-pgns"
   },
   "dependencies": {
     "base64-arraybuffer": "^0.2.0",

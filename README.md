@@ -20,9 +20,9 @@ You will need a source of information on how to decode the various CAN messages 
 
 ```javascript
 const pgns = require('@canboat/pgns') // Third party definition file.
-const { cleanup, createGetInfo, parser } = require('nori-can')
+const { cleanup, canboatGetInfo, parser } = require('nori-can')
 
-const getPgnInfo = createGetInfo(pgns)
+const getPgnInfo = canboatGetInfo(pgns)
 const parse = parser(getPgnInfo)
 const message = `19:27:10.670 R 11F80F03 20 1A 12 01 23 29 14 81
 19:27:10.675 R 11F80F03 21 E1 23 D6 EC AA 04 1A
@@ -59,12 +59,11 @@ console.log(cleanup(result[0]))
 
 ```javascript
 const pgns = require('@canboat/pgns') // Third party definition file.
-const { createGetPgn } = require('nori-can')
+const { canboatGetInfo } = require('nori-can')
 
-const getPgnInfo = createGetPgn(pgns)
-// If you prefer to get the first result use createGetPgn0()
+const getPgnInfo = canboatGetInfo(pgns)
 
-console.log(getPgnInfo[0]) // note result is an array
+console.log(getPgnInfo(60928)) // note result is an array
 
 // You will get something that looks like this:
 const expectedRes = {
