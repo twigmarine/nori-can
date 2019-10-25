@@ -18,6 +18,13 @@ You will need a source of information on how to decode the various CAN messages 
 
 ### Parse a string
 
+Turn a string message (one line) into a usable object that can be processed.
+`parseString(str)`
+
+Turn many lines in usabel objects.
+`processStringInput(strLines)`
+
+Turn many lines into parsed information.
 ```javascript
 const pgns = require('@canboat/pgns') // Third party definition file.
 const { cleanup, canboatGetInfo, parser } = require('nori-can')
