@@ -3173,13 +3173,13 @@ posix-character-classes@^0.1.0:
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
-prairie@^3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/prairie/-/prairie-3.10.0.tgz#e6cbfe5dfd4cecc2317940e8d33f6f306fb74e4c"
-  integrity sha512-iyvQWD4VCeCUK1gy+Abyv0Ez49dcktJdOiaHRLxc4sOKlL4fcyby6/CkIC/PEIDEiN6fdFjWBy8uf3qdXqvMCw==
+prairie@^3.10.1:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/prairie/-/prairie-3.10.1.tgz#9beb0730ed713ae48764ba412f4175baa78f0e50"
+  integrity sha512-mjcK6g+OkylyFHbaCsnUoN6a2hiG4AoAbEmQj1mG1DsZ+VeYh2jtbvrn3IdqFN7cCZr9Cn7yQ8j7C/g6WKahjw==
   dependencies:
     lodash "^4.17.15"
-    understory "^1.10.0"
+    understory "^1.10.1"
 
 prairie@^3.9.3:
   version "3.9.3"
@@ -3994,10 +3994,10 @@ uglify-js@^3.1.4:
     commander "~2.20.0"
     source-map "~0.6.1"
 
-understory@^1.10.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/understory/-/understory-1.10.0.tgz#6db9ae8dd2a037a5482e789ece04c2dab9d849e0"
-  integrity sha512-OTnEiizClPuPtf6rqx54Q4ROf47xebD+1nVMv1M9LwjQxUx1IH12msTe/cDmxaT+07xe9+4rHGlGIo8niJRZtg==
+understory@^1.10.1:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/understory/-/understory-1.10.1.tgz#e47f6492fd746e6ae007b518a5111bf399f70ed0"
+  integrity sha512-3iPo3Y5ZRScMHBkcYKh9+VpWNCiR3tA1b4+1yCkMG7uIG2EQdjdMJCjVlUpbjoHrz40/yUf3V0f2R1rgCnsTiA==
   dependencies:
     lodash "^4.17.15"
 
