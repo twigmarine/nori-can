@@ -10,7 +10,7 @@
       "email": "scott@scottbender.net"
     }
   ],
-  "license": "MIT",
+  "license": "GPL-3.0",
   "scripts": {
     "lint": "eslint lib",
     "test": "npm run lint && jest --watch"
