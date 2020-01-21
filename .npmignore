@@ -13,3 +13,4 @@ src/
 examples/
 .travis.yml
 yarn.lock
+dev.js

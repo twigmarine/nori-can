@@ -59,6 +59,7 @@ processData(getPgnInfo)({ data, dataReady: true, pgn })
 * description: string - Description from fields defintion
 * totalFrames: number - Fast-packet frames needed
 * field: object - Parsed field information here. See Field Props below.
+* data: Uint8Array.
 
 ### Field Props
 
