@@ -40,6 +40,13 @@ const result = parse(message)
 console.log(cleanup(result[0]))
 ```
 
+### Parse a buffer
+
+```javascript
+const data = Uint8Array.from(someBuffer)
+processData(getPgnInfo)({ data, dataReady: true, pgn })
+```
+
 ### Returned Parsed PGN Props
 
 * canId: number - CAN Identifier. ISO 11783 (CAN 2.0 B Extended Frame Format)
@@ -51,7 +58,7 @@ console.log(cleanup(result[0]))
 * sequenceId: number - Fast-packet sequence Id.
 * description: string - Description from fields defintion
 * totalFrames: number - Fast-packet frames needed
-* data: object - Parsed field information here. See Field Props below.
+* field: object - Parsed field information here. See Field Props below.
 
 ### Field Props
 
