@@ -43,8 +43,25 @@ console.log(cleanup(result[0]))
 ### Parse a buffer
 
 ```javascript
+const { processData } = require('nori-can')
 const data = Uint8Array.from(someBuffer)
 processData(getPgnInfo)({ data, dataReady: true, pgn })
+```
+
+Or if you have a `fields` definition already:
+
+```javascript
+const noriPgns = require('nori-pgns') // private repo
+const { processBinary, pgnInfoById } = require('nori-can')
+
+const pgnIndex = pgnInfoById(noriPgns)
+
+const input = {
+  data: hexToBuff('01,b6,05,ff,7f,ff,ff,00'),
+  info: pgnIndex.batteryStatus,
+}
+const result = processBinary(input)
+console.log(result.field)
 ```
 
 ### Returned Parsed PGN Props
@@ -63,7 +80,7 @@ processData(getPgnInfo)({ data, dataReady: true, pgn })
 
 ### Field Props
 
-* bitLength: number - Number of bits of binary data used to make the value.
+* `bitLength` (number) - Number of bits of binary data used to make the value.
 * type: string - The kind of data.
 * name: string - Short title/description of the field.
 * value: any - Processed value
@@ -239,6 +256,8 @@ const expectedRes = {
   singleFrame: true
 }
 ```
+
+
 
 ## Features
 
