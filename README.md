@@ -4,7 +4,7 @@ Process CAN network messages found on boats into usable javascript data objects.
 
 ## Status
 
-This is alpha stage, even if it does have a 1.x version. Breaking changes will get a full version bump. Expect version bumps. Currently only processing string inputs. Binary inputs work by sending an object similar to what `parseString()` returns to `processPackets()` (partial multi-frames) or `parse()` or `processData(getPgnInfo)({ data, dataReady: true, pgn })` when data value is complete.
+Breaking changes will get a full version bump. Expect version bumps. Binary inputs work by sending an object similar to what `parseString()` returns to `processPackets()` (partial multi-frames) or `parse()` or `processData(getPgnInfo)({ data, dataReady: true, pgn })` when data value is complete.
 
 It's something that could be used in the browser that didn't have any field definitions built in.
 
@@ -257,7 +257,16 @@ const expectedRes = {
 }
 ```
 
+```javascript
+const pgns = require('nori-pgns')
+const { createGetInfo } = require('nori-can')
 
+const getPgnInfo = createGetInfo(pgns)
+const message = { pgn: 127505 }
+const info = getPgnInfo(message)
+const message2 = { pgn: 126208, field: { functionCode: 5 }}
+const info = getPgnInfo(message2)
+```
 
 ## Features
 
