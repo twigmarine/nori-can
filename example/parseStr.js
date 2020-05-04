@@ -31,6 +31,15 @@ const res = parse(str)
 console.log(res)
 
 console.log(toNumber(hexToView('11,D0,FF,FF'), true))
+
+
+const str2 = `19:01:26.091 T 0DED0942 02 74 20 54 61 62 6C 65
+19:01:26.123 R 0DED4209 01 F0 FF FF FF FF FF FF
+19:23:14.656 R 0DEDFF1B 02 01 03 04 04 F3 64 FF
+19:23:14.662 R 19ED1B82 A1 00 F0 FF FF FF FF FF`
+
+console.log(parse(str2))
+
 // -12271 * 0.00000003125 =
 // -0.00038346875
 // -0.00038346875 / -0.021971140950157 deg/sec * 60 -1.32 deg/min
