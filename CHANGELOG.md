@@ -1,3 +1,7 @@
+## 2.9.1
+* canIdString uppercase
+* fix `addressable`
+
 ## 2.9.0
 * `parse()` will now look for field `default` property when field value is undefined.
 
