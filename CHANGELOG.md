@@ -1,3 +1,6 @@
+## 2.9.0
+* `parse()` will now look for field `default` property when field value is undefined.
+
 ## 2.8.0
 * Allow `createGetInfo()` to accept input with `id` for direct match instead of `pgn` + match values.
 * `getFieldData()` via `encode()` will now force use of `match` value when found the field info.
