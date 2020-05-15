@@ -330,3 +330,5 @@ All compliant devices must be self-configurable and capable of claiming addresse
 * Source addresses can change. Do not use them as a unique permanent device identifier.
 
 ### Priority
+
+3 bits. 0 - 7.

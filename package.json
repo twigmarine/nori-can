@@ -34,8 +34,8 @@
     "int64-buffer": "^0.99.1007",
     "lodash": "^4.17.15",
     "lodash-humps": "^3.1.5",
-    "prairie": "^3.10.1",
+    "prairie": "^3.10.2",
     "split-lines": "^2.0.0",
-    "understory": "^1.10.1"
+    "understory": "^1.11.0"
   }
 }
