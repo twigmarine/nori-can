@@ -38,7 +38,7 @@ const str2 = `19:01:26.091 T 0DED0942 02 74 20 54 61 62 6C 65
 19:23:14.656 R 0DEDFF1B 02 01 03 04 04 F3 64 FF
 19:23:14.662 R 19ED1B82 A1 00 F0 FF FF FF FF FF`
 
-console.log(parse(str2))
+// console.log(parse(str2))
 
 // -12271 * 0.00000003125 =
 // -0.00038346875
@@ -46,3 +46,11 @@ console.log(parse(str2))
 // 2147483647 maxVal 67 radians
 // 0.00029
 // console.log(numMap)
+
+const str3 = `00:23:15.816 R 1DFF0102 20 1C 27 99 00 22 04 00
+00:23:15.817 R 1DFF0102 21 04 03 00 04 03 00 04
+00:23:15.817 R 1DFF0102 22 03 00 04 04 28 04 03
+00:23:15.818 R 1DFF0102 23 00 04 00 00 04 00 00
+00:23:15.819 R 1DFF0102 24 04 FF FF FF FF FF FF`
+
+console.log(parse(str3)[0])
