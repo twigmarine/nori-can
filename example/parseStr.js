@@ -28,7 +28,7 @@ const res = parse(str)
     rate: field.rate.value,
   }))
 
-console.log(res)
+// console.log(res)
 
 console.log(toNumber(hexToView('11,D0,FF,FF'), true))
 
@@ -53,4 +53,24 @@ const str3 = `00:23:15.816 R 1DFF0102 20 1C 27 99 00 22 04 00
 00:23:15.818 R 1DFF0102 23 00 04 00 00 04 00 00
 00:23:15.819 R 1DFF0102 24 04 FF FF FF FF FF FF`
 
-console.log(parse(str3)[0])
+// console.log(parse(str3)[0])
+
+const str4 = `21:54:44.147 R 0DEDD100 61 01 01 00 01 03 FF FF
+21:54:44.148 R 0DED00D1 C1 00 FF FF FF FF FF FF
+21:54:44.154 R 0DEDD100 68 66 00 20 FF FF FF FF`
+// console.log(parse(str4)[0])
+
+const str5 = `21:55:27.126 R 0DEDD200 81 01 01 10 01 01 FF FF
+21:55:27.128 R 0DED00D2 E1 00 FF FF FF FF FF FF
+21:55:27.134 R 0DEDD200 88 66 00 20 FF FF FF FF`
+
+// console.log(parse(str5)[0])
+
+const str6 = `22:13:41.236 R 0DEDE100 A1 01 01 00 01 02 FF FF
+22:13:41.238 R 0DED00E1 01 01 01 00 01 02 FF FF
+22:13:41.246 R 0DEDE100 A8 66 00 20 FF FF FF FF`
+
+const str7 = `04:12:22.228 R 15FD0A05 FF 00 01 F3 2A 01 00 FF
+04:12:22.229 R 15FD0A05 FF 01 01 91 17 0A 00 FF`
+
+console.log(parse(str7))

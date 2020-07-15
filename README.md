@@ -21,7 +21,7 @@ You will need a source of information on how to decode the various CAN messages 
 Turn a string message (one line) into a usable object that can be processed.
 `parseString(str)`
 
-Turn many lines in usabel objects.
+Turn many lines in usable objects.
 `processStringInput(strLines)`
 
 Turn many lines into parsed information.
