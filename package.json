@@ -22,7 +22,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-json": "^2.1.2",
     "eslint-plugin-lodash-fp": "^2.2.0-a1",
-    "jest": "^26.6.3",
+    "jest": "25.5.4",
     "nori-pgns": "webmasterkai/nori-pgns"
   },
   "dependencies": {
