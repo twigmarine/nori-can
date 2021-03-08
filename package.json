@@ -17,23 +17,23 @@
   },
   "devDependencies": {
     "@canboat/pgns": "^1.0.8",
-    "eslint": "^6.5.1",
+    "eslint": "^7.21.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-json": "^2.1.2",
     "eslint-plugin-lodash-fp": "^2.2.0-a1",
-    "jest": "^24.9.0",
+    "jest": "^26.6.3",
     "nori-pgns": "webmasterkai/nori-pgns"
   },
   "dependencies": {
     "base64-arraybuffer": "^0.2.0",
-    "big.js": "^6.0.2",
-    "bit-buffer": "^0.2.4",
+    "big.js": "^6.0.3",
+    "bit-buffer": "^0.2.5",
     "date-fns": "^2.16.1",
     "get-bits": "^1.1.0",
     "int64-buffer": "^1.0.0",
-    "lodash": "^4.17.20",
-    "lodash-humps": "^3.1.5",
+    "lodash": "^4.17.21",
+    "lodash-humps": "^3.1.6",
     "prairie": "^3.12.1",
     "understory": "^1.13.0"
   }
