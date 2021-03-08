@@ -3454,13 +3454,13 @@ posix-character-classes@^0.1.0:
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
-prairie@^3.12.1:
-  version "3.12.1"
-  resolved "https://registry.yarnpkg.com/prairie/-/prairie-3.12.1.tgz#dc2ef952b4f0fb45aa4a8f581150963760f62c7a"
-  integrity sha512-EybQog/BpvK+olMC6dXz/eK10DjsZylNvu/XWn+sgrpHNcVBOMRDHuyWlOJMeokNu8oFVb0XXmfIu8K5C2xPrQ==
+prairie@^3.12.2:
+  version "3.12.2"
+  resolved "https://registry.yarnpkg.com/prairie/-/prairie-3.12.2.tgz#a8bda703718bc1855b06692a8894dcc84805f165"
+  integrity sha512-NoRNK7GM1QSMhhyWXPBKznr48JV1gSyolgVySRyLms4pFIzel1VYfkGbfx6GpITMqEkzWQDHTSo/FCxSzksddQ==
   dependencies:
-    lodash "^4.17.20"
-    understory "^1.13.0"
+    lodash "^4.17.21"
+    understory "^1.13.1"
 
 prelude-ls@^1.2.1:
   version "1.2.1"
@@ -4252,12 +4252,12 @@ unbox-primitive@^1.0.0:
     has-symbols "^1.0.0"
     which-boxed-primitive "^1.0.1"
 
-understory@^1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/understory/-/understory-1.13.0.tgz#dd2c57baffb4fa01066b6fd9aad6ce6f7b55a069"
-  integrity sha512-70OpNnXlSLr0ae+XM/bBkdVTMIavJ5iXn2lwk3vMVWXbUKneYnnMLIMjUP+Ec3K4Zwu2u/PjkXkRqZhVrZcHRQ==
+understory@^1.13.1:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/understory/-/understory-1.13.1.tgz#c981d67cfcc3b93b9881cf4d0a3f51e60e7c57ed"
+  integrity sha512-pc6LdqVuhoRn5ei1n7cvD9vGLMHvQMbNfY+NMLquYkxayAukRI7z5piehcizhurCeSGYYJAx1f6HBmJEtLZuNQ==
   dependencies:
-    lodash "^4.17.20"
+    lodash "^4.17.21"
 
 union-value@^1.0.0:
   version "1.0.1"
