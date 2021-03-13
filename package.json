@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@canboat/pgns": "^1.0.8",
-    "eslint": "^7.21.0",
+    "eslint": "^7.22.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-json": "^2.1.2",
